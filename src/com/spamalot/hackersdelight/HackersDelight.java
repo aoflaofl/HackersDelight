@@ -1,5 +1,7 @@
 package com.spamalot.hackersdelight;
 
+import com.spamalot.hackersdelight.bits.Utilities;
+
 /**
  * Testing and what-not for Hacker's Delight classes.
  * 
