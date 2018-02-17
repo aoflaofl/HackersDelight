@@ -87,4 +87,28 @@ public final class BitManipulation {
     return x & (x + 1);
   }
 
+  public static int turnOnTrailingZeros(int x) {
+    return x | (x - 1);
+  }
+
+  public static long turnOnTrailingZeros(long x) {
+    return x | (x - 1);
+  }
+
+  public static int onBitAtPositionOfRightmostOffBit(int x) {
+    return ~x & (x + 1);
+  }
+
+  public static long onBitAtPositionOfRightmostOffBit(long x) {
+    return ~x & (x + 1);
+  }
+
+  public static int offBitAtPositionOfRightmostOnBit(int x) {
+    return ~x | (x - 1);
+  }
+
+  public static long offBitAtPositionOfRightmostOnBit(long x) {
+    return ~x | (x - 1);
+  }
+
 }

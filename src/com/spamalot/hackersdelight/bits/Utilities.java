@@ -23,6 +23,7 @@ public final class Utilities {
    */
   public static int countOnBits(final long x) {
     int count = 0;
+
     for (long y = x; y != 0; y = BitManipulation.turnOffRightMostOnBit(y)) {
       count++;
     }

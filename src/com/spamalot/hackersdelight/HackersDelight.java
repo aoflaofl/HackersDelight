@@ -24,15 +24,15 @@ public final class HackersDelight {
    *          things to do something with
    */
   public static void main(final String[] args) {
-    int i = 0;
-    System.out.println(Integer.bitCount(i));
+    long i = 0;
+    System.out.println(Long.bitCount(i));
 
-    System.out.println(Integer.toBinaryString(i));
-
-    i = (int) Math.pow(2, 30) + 3;
+    System.out.println(Long.toBinaryString(i));
 
     // 1073741824
-    System.out.println("i: " + i + " = " + Integer.toBinaryString(i));
+
+    i = -65L;
+    System.out.println("i: " + i + " = " + Long.toBinaryString(i));
 
     System.out.println(Utilities.countOnBits(i));
 
