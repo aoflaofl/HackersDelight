@@ -7,9 +7,17 @@ import com.spamalot.hackersdelight.bits.BitManipulation;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Test BitManipulation class.
+ * 
+ * @author gej
+ *
+ */
 class BitManipulationTest {
 
-  @SuppressWarnings("static-method")
+  /**
+   * Test turnOffRightMostOnBit(int).
+   */
   @Test
   void testTurnOffRightMostOnBitInt() {
     int i = Integer.valueOf("0000000000000000000000000000001", 2).intValue();
@@ -42,6 +50,9 @@ class BitManipulationTest {
     assertEquals(1073741826, i);
   }
 
+  /**
+   * Test turnOffRightMostOnBit(long).
+   */
   @Test
   void testTurnOffRightMostOnBitLong() {
     long l = 1;
@@ -196,7 +207,7 @@ class BitManipulationTest {
 
     l = BitManipulation.offBitAtPositionOfRightmostOnBit(l);
 
-    assertEquals("1111111111111111111111111111111111111111111111111111111110111111", Long.toBinaryString(l));
+    assertEquals(m, Long.toBinaryString(l));
   }
 
 }
