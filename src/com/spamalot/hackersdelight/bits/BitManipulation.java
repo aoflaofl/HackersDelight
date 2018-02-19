@@ -138,9 +138,26 @@ public final class BitManipulation {
     return ~x & (x + 1);
   }
 
+  /**
+   * Return an integer with all bits on except in the position of rightmost one
+   * bit of argument.
+   * 
+   * @param x
+   *          32 bit integer
+   * @return x with all bits one except where rightmost one bit was in argument.
+   */
   public static int offBitAtPositionOfRightmostOnBit(int x) {
     return ~x | (x - 1);
   }
+
+  /**
+   * Return an integer with all bits on except in the position of rightmost one
+   * bit of argument.
+   * 
+   * @param x
+   *          64 bit integer
+   * @return x with all bits one except where rightmost one bit was in argument.
+   */
 
   public static long offBitAtPositionOfRightmostOnBit(long x) {
     return ~x | (x - 1);

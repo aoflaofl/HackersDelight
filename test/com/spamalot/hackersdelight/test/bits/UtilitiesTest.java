@@ -1,4 +1,4 @@
-package com.spamalot.hackersdelight.test.integer;
+package com.spamalot.hackersdelight.test.bits;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
