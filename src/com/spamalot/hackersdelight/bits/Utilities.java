@@ -31,4 +31,15 @@ public final class Utilities {
     return count;
   }
 
+  /**
+   * Check if an integer is a power of two.
+   * 
+   * @param x
+   *          an integer to check
+   * @return true if the integer is a power of two, false otherwise.
+   */
+  public static boolean isPowerOf2(final long x) {
+    return BitManipulation.turnOffRightMostOnBit(x) == 0;
+  }
+
 }
