@@ -2,19 +2,19 @@ package com.spamalot.hackersdelight.bits;
 
 /**
  * Methods implementing functions from Hacker's Delight.
- * <p>
- * Cite the book here.
- * <p>
- * These are implementations of the functions and algorithms described in the
+ * 
+ * <p>Cite the book here.
+ * 
+ * <p>These are implementations of the functions and algorithms described in the
  * book. In each case the goal is to make them correct, not necessarily
  * efficient. E.g. in many cases you will want to implement these in-line rather
  * than as method calls.
- * <p>
- * Discussion. These methods make use of adding and subtracting 1 from integers.
- * Adding one to an integer turns the rightmost 1 bits to 0 and the rightmost 0
- * bit turns to 1. So 000 becomes 001 and 001 becomes 010, etc.
- * <p>
- * Subtracting 1 has the effect of turning the rightmost zeros to 1s and the
+ * 
+ * <p>Discussion. These methods make use of adding and subtracting 1 from
+ * integers. Adding one to an integer turns the rightmost 1 bits to 0 and the
+ * rightmost 0 bit turns to 1. So 000 becomes 001 and 001 becomes 010, etc.
+ * 
+ * <p>Subtracting 1 has the effect of turning the rightmost zeros to 1s and the
  * rightmost 1 to 0.
  * 
  * @author gej
@@ -99,7 +99,7 @@ public final class BitManipulation {
    *          32 bin integer
    * @return x with trailing zero bits turned to ones.
    */
-  public static int turnOnTrailingZeros(int x) {
+  public static int turnOnTrailingZeros(final int x) {
     return x | (x - 1);
   }
 
@@ -110,7 +110,7 @@ public final class BitManipulation {
    *          64 bit integer
    * @return x with trailing zero bits turned to ones.
    */
-  public static long turnOnTrailingZeros(long x) {
+  public static long turnOnTrailingZeros(final long x) {
     return x | (x - 1);
   }
 
@@ -122,7 +122,7 @@ public final class BitManipulation {
    *          32 bit integer
    * @return x with all bits zero except where rightmost zero bit was in original.
    */
-  public static int onBitAtPositionOfRightmostOffBit(int x) {
+  public static int onBitAtPositionOfRightmostOffBit(final int x) {
     return ~x & (x + 1);
   }
 
@@ -134,7 +134,7 @@ public final class BitManipulation {
    *          64 bit integer
    * @return x with all bits zero except where rightmost zero bit was in original.
    */
-  public static long onBitAtPositionOfRightmostOffBit(long x) {
+  public static long onBitAtPositionOfRightmostOffBit(final long x) {
     return ~x & (x + 1);
   }
 
@@ -146,7 +146,7 @@ public final class BitManipulation {
    *          32 bit integer
    * @return x with all bits one except where rightmost one bit was in argument.
    */
-  public static int offBitAtPositionOfRightmostOnBit(int x) {
+  public static int offBitAtPositionOfRightmostOnBit(final int x) {
     return ~x | (x - 1);
   }
 
@@ -159,7 +159,7 @@ public final class BitManipulation {
    * @return x with all bits one except where rightmost one bit was in argument.
    */
 
-  public static long offBitAtPositionOfRightmostOnBit(long x) {
+  public static long offBitAtPositionOfRightmostOnBit(final long x) {
     return ~x | (x - 1);
   }
 
