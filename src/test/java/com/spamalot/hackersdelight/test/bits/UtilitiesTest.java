@@ -3,10 +3,11 @@ package com.spamalot.hackersdelight.test.bits;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 import com.spamalot.hackersdelight.bits.Utilities;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 /**
  * Test the bit manipulation Utilities class.
@@ -14,13 +15,13 @@ import org.junit.jupiter.api.Test;
  * @author gej
  *
  */
-class UtilitiesTest {
+public class UtilitiesTest {
 
   /**
    * Test countOnBits(long).
    */
   @Test
-  void testCountOnBits() {
+  public void testCountOnBits() {
     int i = Integer.valueOf("0000000000000000000000000000001", 2).intValue();
     assertEquals(1, Utilities.countOnBits(i));
 
