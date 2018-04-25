@@ -163,7 +163,7 @@ public final class BitManipulation {
     return ~x | (x - 1);
   }
 
-  public static long snoob(long x) {
+  public static long snoob(final long x) {
     long smallest, ripple, ones;
 
     smallest = x & -x;
