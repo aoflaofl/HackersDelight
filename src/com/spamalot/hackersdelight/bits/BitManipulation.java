@@ -163,4 +163,15 @@ public final class BitManipulation {
     return ~x | (x - 1);
   }
 
+  public static long snoob(long x) {
+    long smallest, ripple, ones;
+
+    smallest = x & -x;
+    ripple = x + smallest;
+    ones = x ^ ripple;
+    ones = (ones >> 2) / smallest;
+
+    return ripple | ones;
+  }
+
 }
