@@ -28,11 +28,11 @@ public final class HackersDelight {
     long i = Long.valueOf("000000000000000000000000000000000000000000000000000000011110000", 2).longValue();
     System.out.println(Long.bitCount(i));
     System.out.println(Long.toBinaryString(i));
-    
+
     i = BitManipulation.snoob(i);
     System.out.println(Long.bitCount(i));
     System.out.println(Long.toBinaryString(i));
-    
+
     // 1073741824
 
     i = -65L;

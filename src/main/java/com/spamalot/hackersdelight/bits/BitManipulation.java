@@ -49,7 +49,7 @@ public final class BitManipulation {
   }
 
   /**
-   * Turn on the rightmost off bit in a 64 bit integer.
+   * Turn on the rightmost off bit in a 32 bit integer.
    * 
    * @param x
    *          32 bit integer
@@ -163,8 +163,13 @@ public final class BitManipulation {
     return ~x | (x - 1);
   }
 
+  /**
+   * Next higher number with same number of 1-bits.
+   */
   public static long snoob(final long x) {
-    long smallest, ripple, ones;
+    long smallest;
+    long ripple;
+    long ones;
 
     smallest = x & -x;
     ripple = x + smallest;
@@ -173,5 +178,4 @@ public final class BitManipulation {
 
     return ripple | ones;
   }
-
 }
